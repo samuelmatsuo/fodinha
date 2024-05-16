@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcação de Pontos - Fodinha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="pontuacaoBody">
+    <div class="container">
+        <h1>Marcação de Pontos</h1>
+        <div id="jogadores"></div>
+        <div class="campo-centralizado">
+            <label for="nome" class="sr-only">Nome do Jogador:</label> <!-- Adicionei uma classe para ocultar o label -->
+            <input type="text" id="nome" placeholder="Nome do Jogador" class="campo-texto">
+            <button id="adicionarJogador" onclick="adicionarCampo()">Adicionar Jogador</button>
+        </div>
+        <div id="mensagem"></div>
+    </div>
+</body>
+</html>

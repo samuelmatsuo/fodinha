@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 95%; /* Aumentei a largura máxima */
+    padding: 30px; /* Aumentei o espaçamento interno */
+    background-color: #fff;
+    border-radius: 15px; /* Aumentei o raio da borda */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumentei a sombra */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px; /* Aumentei a margem inferior */
+    font-size: 50px; /* Aumentei o tamanho do texto */
+    color: #007bff;
+}
+
+button {
+    padding: 15px 30px; /* Aumentei o preenchimento do botão */
+    margin-top: 20px; /* Aumentei a margem superior do botão */
+    font-size: 25px !important; /* Aumentei o tamanho do texto do botão */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Aumentei o raio da borda do botão */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#jogadores {
+    margin-top: 30px; /* Aumentei a margem superior do contêiner de jogadores */
+}
+
+.jogador {
+    margin-bottom: 20px; /* Aumentei a margem inferior do jogador */
+    padding: 20px; /* Aumentei o preenchimento do jogador */
+    background-color: #f9f9f9;
+    border-radius: 10px; /* Aumentei o raio da borda do jogador */
+    text-align: center;
+}
+
+.jogador span {
+    display: block;
+    margin-bottom: 10px; /* Aumentei a margem inferior do nome do jogador */
+    font-weight: bold;
+    font-size: 20px; /* Aumentei o tamanho do texto do nome do jogador */
+}
+
+.campo-centralizado {
+    margin-top: 30px; /* Aumentei a margem superior do contêiner de entrada */
+}
+
+.campo-texto {
+    padding: 15px;
+    margin: 0 auto; /* Centralizei horizontalmente */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: inline-block; /* Alterado para inline-block */
+    width: calc(70% - 10px); /* Reduzi a largura para acomodar o botão */
+    max-width: 400px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 30px;
+    margin-top: 20px;
+    margin-left: 10px; /* Adicionei margem à esquerda */
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.jogador span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px; /* Aumentei o tamanho da fonte */
+}
+.sr-only {
+    font-size: 25px !important; /* Aumente o tamanho da fonte */
+}
+
+button, input {
+    touch-action: manipulation; /* Garante que os gestos de toque não bloqueiem a tela */
+}

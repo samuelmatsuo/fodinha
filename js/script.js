@@ -115,7 +115,7 @@ function removerVida(index) {
     debugger
     if (jogador.pontuacao === 0) {
         
-        seFude();
+        seFude(index);
 
         jogadores.splice(index, 1);
         localStorage.setItem("jogadores", JSON.stringify(jogadores));
@@ -128,10 +128,10 @@ function removerVida(index) {
     }
 }
 
-function seFude() {
+function seFude(index) {
     var mensagem = document.createElement("div");
     mensagem.className = "div-msg";
-    mensagem.innerText = jogadores[0].nome + " Se fudeu!";
+    mensagem.innerText = jogadores[index].nome + " Se fudeu!";
     mensagem.style.fontSize = "20px";
     mensagem.style.position = "fixed";
     mensagem.style.top = "50%";

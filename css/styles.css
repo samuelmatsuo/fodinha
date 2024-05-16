@@ -18,14 +18,24 @@ body {
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 30px; /* Aumentei a margem inferior */
-    font-size: 50px; /* Aumentei o tamanho do texto */
-    color: #007bff;
-}
+
+/* Estilos para o título "Fodinha" */
+
 
 button {
     padding: 15px 30px; /* Aumentei o preenchimento do botão */
+    margin-top: 20px; /* Aumentei a margem superior do botão */
+    margin-left: 10px; /* Adicionei margem à esquerda */
+    font-size: 25px !important; /* Aumentei o tamanho do texto do botão */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Aumentei o raio da borda do botão */
+    cursor: pointer;
+}
+
+.button-msg {
+    padding: 5px 10px; /* Aumentei o preenchimento do botão */
     margin-top: 20px; /* Aumentei a margem superior do botão */
     font-size: 25px !important; /* Aumentei o tamanho do texto do botão */
     background-color: #007bff;
@@ -74,18 +84,6 @@ button:hover {
     box-sizing: border-box;
 }
 
-button {
-    padding: 15px 30px;
-    margin-top: 20px;
-    margin-left: 10px; /* Adicionei margem à esquerda */
-    font-size: 18px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 .jogador span {
     display: block;
     margin-bottom: 10px;
@@ -99,3 +97,5 @@ button {
 button, input {
     touch-action: manipulation; /* Garante que os gestos de toque não bloqueiem a tela */
 }
+
+

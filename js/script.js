@@ -89,11 +89,11 @@ function exibirJogadores() {
 
         var pontuacaoJogador = document.createElement("span");
         pontuacaoJogador.style.fontSize = "25px";
-        pontuacaoJogador.innerText = "Pontuação: " + jogador.pontuacao;
+        pontuacaoJogador.innerText = "vida: " + jogador.pontuacao;
 
         var btnRemoverVida = document.createElement("button");
         btnRemoverVida.style.fontSize = "25px";
-        btnRemoverVida.innerText = "-1 Vida";
+        btnRemoverVida.innerText = "- 1 Vida";
         btnRemoverVida.onclick = function () {
             removerVida(index);
         };
@@ -130,26 +130,28 @@ function removerVida(index) {
 
 function seFude() {
     var mensagem = document.createElement("div");
+    mensagem.className = "div-msg";
     mensagem.innerText = jogadores[0].nome + " Se fudeu!";
-    mensagem.style.fontSize = "30px";
+    mensagem.style.fontSize = "20px";
     mensagem.style.position = "fixed";
     mensagem.style.top = "50%";
     mensagem.style.left = "50%";
     mensagem.style.transform = "translate(-50%, -50%)";
     mensagem.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
-    mensagem.style.padding = "20px";
+    mensagem.style.padding = "10px";
     mensagem.style.borderRadius = "10px";
     mensagem.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)";
     mensagem.style.animation = "bounce 1s infinite alternate";
 
     var botaoFechar = document.createElement("button");
+    botaoFechar.className = "button-msg";
     botaoFechar.innerText = "X";
     botaoFechar.style.fontSize = '10px';
     botaoFechar.onclick = function () {
         // Remove o último jogador restante
        document.body.removeChild(mensagem);
     };
-    botaoFechar.style.marginTop = "20px";
+    botaoFechar.style.marginTop = "10px";
 
     mensagem.appendChild(botaoFechar);
     document.body.appendChild(mensagem);
@@ -157,6 +159,7 @@ function seFude() {
 
 function ganhou(){
     var mensagem = document.createElement("div");
+    mensagem.className = "div-msg";
     mensagem.innerText = jogadores[0].nome + " ganhou!";
     mensagem.style.fontSize = "30px";
     mensagem.style.position = "fixed";
@@ -164,12 +167,13 @@ function ganhou(){
     mensagem.style.left = "50%";
     mensagem.style.transform = "translate(-50%, -50%)";
     mensagem.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
-    mensagem.style.padding = "20px";
+    mensagem.style.padding = "10px";
     mensagem.style.borderRadius = "10px";
     mensagem.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)";
     mensagem.style.animation = "bounce 1s infinite alternate";
 
     var botaoInicio = document.createElement("button");
+    botaoInicio.className = "button-msg";
     botaoInicio.innerText = "Voltar ao Início";
     botaoInicio.onclick = function () {
         // Remove o último jogador restante

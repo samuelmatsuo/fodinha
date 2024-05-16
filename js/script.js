@@ -113,7 +113,7 @@ function removerVida(index) {
 
     var jogador = jogadores[index];
     if (jogador.pontuacao === 0) {
-        var mensagem = jogador.nome + "SE FUDEU!!";
+        var mensagem = jogador.nome + " SE FUDEU!!";
         alert(mensagem);
         jogadores.splice(index, 1);
         localStorage.setItem("jogadores", JSON.stringify(jogadores));

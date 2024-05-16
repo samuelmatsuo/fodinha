@@ -114,8 +114,6 @@ function removerVida(index) {
     var jogador = jogadores[index];
     debugger
     if (jogador.pontuacao === 0) {
-        var mensagem = jogador.nome + " SE FUDEU!!";
-        alert(mensagem);
         
         seFude();
 

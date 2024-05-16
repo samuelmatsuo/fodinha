@@ -148,8 +148,8 @@ function removerVida(index) {
             mensagem.appendChild(botaoInicio); 
             document.body.appendChild(mensagem); 
         }
-    } else if (jogador.pontuacao === 1) {
-        var mensagem = jogador.nome + " está com 1 vida.";
+    } else if (jogador.pontuacao === 0) {
+        var mensagem = jogador.nome + "SE FUDEU!!";
         alert(mensagem);
     }
 }

@@ -113,6 +113,8 @@ function removerVida(index) {
 
     var jogador = jogadores[index];
     if (jogador.pontuacao === 0) {
+        var mensagem = jogador.nome + "SE FUDEU!!";
+        alert(mensagem);
         jogadores.splice(index, 1);
         localStorage.setItem("jogadores", JSON.stringify(jogadores));
         exibirJogadores();
@@ -148,9 +150,6 @@ function removerVida(index) {
             mensagem.appendChild(botaoInicio); 
             document.body.appendChild(mensagem); 
         }
-    } else if (jogador.pontuacao === 0) {
-        var mensagem = jogador.nome + "SE FUDEU!!";
-        alert(mensagem);
     }
 }
 if ('wakeLock' in navigator) {

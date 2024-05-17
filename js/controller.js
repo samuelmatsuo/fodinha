@@ -1,5 +1,4 @@
 import AlertMsgClose from "./componentes/alert/AlertMsgClose.js";
-import AlertMsgNotNull from "./componentes/alert/AlertMsgNotNull.js";
 import AlertMsgWin from "./componentes/alert/AlertMsgWin.js";
 import limparCampo from "./limparCampo.js";
 
@@ -44,7 +43,7 @@ function adicionarCampo() {
 function cadastrarJogador() {
     var nomeJogador = document.getElementById("nome").value;
     if (nomeJogador.trim() === "") {
-        AlertMsgNotNull("Por favor, insira o nome do jogador.");
+        AlertMsgClose("Por favor, insira o nome do jogador.");
         return;
     }
     var jogador = {

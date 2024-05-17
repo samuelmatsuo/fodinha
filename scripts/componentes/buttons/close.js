@@ -6,7 +6,7 @@ export default function Close(mensagem){
     botaoFechar.innerText = "X";
     botaoFechar.style.fontSize = '10px';
     botaoFechar.onclick = function () {
-        onClickClose(mensagem);
+    onClickClose(mensagem);
     };
     botaoFechar.style.marginTop = "10px";
 

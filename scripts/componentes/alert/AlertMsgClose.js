@@ -1,6 +1,7 @@
-import Close from "../buttons/close.js";
+import Close from "../../componentes/buttons/close.js";
 
-export default function AlertMsgClose(msg){
+export default function AlertMsgClose(msg, isFechar){
+
     var mensagem = document.createElement("div");
     mensagem.className = "div-msg";
     mensagem.innerText = msg;
@@ -18,5 +19,16 @@ export default function AlertMsgClose(msg){
     // Adicionando o botão de fechar utilizando a função Close do arquivo buttons/close.js
     Close(mensagem);
 
+    if(isFechar === true){
+    function fecharMensagem() {
+        if (document.body.contains(mensagem)) {
+            document.body.removeChild(mensagem);
+        }
+        clearTimeout(timeoutId); // Cancela o timeout se já não tiver sido executado
+    }
+
+    var timeoutId = setTimeout(fecharMensagem, 5000);
+    }
+    
     document.body.appendChild(mensagem);
 }

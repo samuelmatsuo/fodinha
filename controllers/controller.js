@@ -1,6 +1,6 @@
-import AlertMsgClose from "./componentes/alert/AlertMsgClose.js";
-import AlertMsgWin from "./componentes/alert/AlertMsgWin.js";
-import limparCampo from "./limparCampo.js";
+import AlertMsgClose from "../scripts/componentes/alert/AlertMsgClose.js";
+import AlertMsgWin from "../scripts/componentes/alert/AlertMsgWin.js";
+import limparCampo from "../controllers/limparCampo.js"
 
 var jogadores = [];
 
@@ -43,7 +43,7 @@ function adicionarCampo() {
 function cadastrarJogador() {
     var nomeJogador = document.getElementById("nome").value;
     if (nomeJogador.trim() === "") {
-        AlertMsgClose("Por favor, insira o nome do jogador.");
+        AlertMsgClose("Por favor, insira o nome do jogador.", false);
         return;
     }
     var jogador = {
@@ -56,7 +56,7 @@ function cadastrarJogador() {
     if (jogadores.length < 6) {
         limparCampo();
     } else {
-        window.location.href = "pontuacao.html";
+        window.location.href = "views/pontuacao.html";
     }
     window.location.reload();
 }
@@ -111,7 +111,7 @@ function removerVida(index) {
     var jogador = jogadores[index];
     if (jogador.pontuacao === 0) {
 
-        AlertMsgClose(jogadores[index].nome + " Se fudeu!");
+        AlertMsgClose(jogadores[index].nome + " Se fudeu!", true);
 
         jogadores.splice(index, 1);
         localStorage.setItem("jogadores", JSON.stringify(jogadores));

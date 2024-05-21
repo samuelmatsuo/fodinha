@@ -12,6 +12,7 @@ let jogadores: Jogador[] = [];
 function adicionarCampo() {
     debugger
     if (jogadores.length < 6) {
+        debugger
         const containerJogadores = document.getElementById("jogadores");
 
         const divNovoJogador = document.createElement("div");
